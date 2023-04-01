@@ -1,0 +1,112 @@
+.jumbotron {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin-top: 60px;
+}
+
+body {
+    background-color: rgb(16, 22, 22);
+}
+
+#about h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+}
+
+#about {
+    margin-top: 50px;
+    padding: 150px 50px;
+}
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 150px 150px;
+}
+
+#projects {
+    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.card {
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 5px 5px 0 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+#sobremi {
+    margin-top: 50px;
+}
+
+#navbarNav {
+    float: inline-end;
+}
+
+#barraNav {
+    background: -webkit-linear-gradient(top, #00F, #3ff) !important;
+}
+
+#pie {
+    background: rgb(0, 197, 197);
+}
+
+@media (max-width: 991.98px) {
+    #barraNav .navbar-collapse {
+        position: fixed;  /*posicionamiento fijo*/
+        top: 56px;  /* Ajustar esto si la barra de navegación tiene una altura diferente */
+        left: 0;    /*el menu tenia una posicion rara y despues de tocar varias veces esto salio bien*/
+        width: 100%;  /*definimos que el menu abarcara el 100% de la pantalla horizontal*/
+        height: calc(100% - 56px);/*definimos que el menu abarque el 100% de forma vertical*/
+        background: -webkit-linear-gradient(top, rgb(0, 201, 201), #00F);
+        /* para que coincida un poco con el fondo de la barra de navegación */
+        /*overflow-y: auto;  no se para que sirve pero lo vi en un codigo parecido lo dejo en comentarios por si mas adelante veo si me sirve*/ 
+        /*overflow-x: hidden; el mismo caso que el y*/
+        transition: transform 0.3s ease-in-out; /*para que la animacion del menu se vea suave */
+        transform: translateX(-100%);
+    }
+
+    #barraNav .navbar-collapse.show {
+        transform: translateX(0%); /*para que el cambio al poner el menu sea completa y no se quede a medias*/
+    }
+
+    #barraNav .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+    }
+}
